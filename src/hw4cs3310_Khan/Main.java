@@ -11,11 +11,6 @@ import java.util.*;
  * operations at cardinalities 5, 50, 100, 150 and 200 along with total average time for add, get and delete and, in
  * the end, sorted versions of the stored numbers.
  *
- * This program was developed using IntelliJ IDE and an extracted (folder) version of it (from .zip file) can be
- * opened from within IntelliJ which can be run thereafter.
- * Output for the input sequence 'a 10, a 12, a 5, a 7, g, d, g, a 2, a 20, d, g, d, d, d, g, g, d, d, d' is given
- * (by choosing 2) at runtime.
- *
  * @author M. Salman Khan
  */
 class Main {
