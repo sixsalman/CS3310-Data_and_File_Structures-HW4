@@ -41,8 +41,8 @@ class ArrayMaxHeap implements Serializable {
     }
 
     /**
-     * Gets the no. of nodes contained in the calling instance of this class
-     * @return no. of nodes contained
+     * Gets the no. of integers contained in the calling instance of this class
+     * @return no. of integers contained
      */
     int getCount () {
         return fillLength;
@@ -50,8 +50,8 @@ class ArrayMaxHeap implements Serializable {
 
     // STEP a
     /**
-     * Gets the integer (maximum value) stored in root node of the calling instance of this class
-     * @return the integer contained in root node
+     * Gets the integer (maximum value) stored as root of the calling instance of this class
+     * @return the integer contained as root
      */
     int getHighestVal () {
         if (fillLength == 0)
@@ -61,7 +61,7 @@ class ArrayMaxHeap implements Serializable {
 
     // STEP c
     /**
-     * Deletes the integer (maximum value) stored in root node of the calling instance of this class and rearranges
+     * Deletes the integer (maximum value) stored as root of the calling instance of this class and rearranges
      * the remaining integers maintaining max-oriented nature of the tree
      */
     void deleteHighestVal () {
@@ -78,14 +78,14 @@ class ArrayMaxHeap implements Serializable {
             while (!stop) {
                 if (traverseIndex * 2 + 1 >= fillLength) {
                     stop = true;
-                } else if (traverseIndex * 2 + 1 < fillLength && traverseIndex * 2 + 2 >= fillLength) {
+                } else if (traverseIndex * 2 + 2 >= fillLength) {
                     if (heap[traverseIndex * 2 + 1] > heap[traverseIndex]) {
                         int tempHolder = heap[traverseIndex];
                         heap[traverseIndex] = heap[traverseIndex * 2 + 1];
                         heap[traverseIndex * 2 + 1] = tempHolder;
                     }
                     stop = true;
-                } else if (traverseIndex * 2 + 2 < fillLength) {
+                } else {
                     if (heap[traverseIndex * 2 + 1] > heap[traverseIndex * 2 + 2]) {
                         if (heap[traverseIndex] < heap[traverseIndex * 2 + 1]) {
                             int tempHolder = heap[traverseIndex];
@@ -123,8 +123,8 @@ class ArrayMaxHeap implements Serializable {
     /**
      * Traverses (in-order) through the integers contained in the calling instance of this class and builds a string
      * using them
-     * @param thisIndex receives index of the root node
-     * @param toRet reference to a StringBuilder to which traversed integers are to be added
+     * @param thisIndex receives index of the root integer
+     * @param toRet reference to the StringBuilder to which traversed integers are to be added
      */
     private void buildInorder (int thisIndex, StringBuilder toRet) {
         if (thisIndex >= fillLength)
