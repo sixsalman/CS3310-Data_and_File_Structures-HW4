@@ -210,7 +210,7 @@ class LinkedListMinHeap implements Serializable {
      * Traverses (in-order) through the integers contained in the calling instance of this class and builds a string
      * using them
      * @param thisNode receives the root node
-     * @param toRet reference to a StringBuilder to which traversed integers are to be added
+     * @param toRet reference to the StringBuilder to which traversed integers are to be added
      */
     private void buildInorder (Node thisNode, StringBuilder toRet) {
         if (thisNode == null)
